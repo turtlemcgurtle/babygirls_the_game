@@ -1,0 +1,13 @@
+Decal System Release Notes
+
+Version 1.1.1
+- Added BulletExample documentation to the code.
+- Workaround: Mesh data is modified by Unity as lightmaps are baked.
+
+Version 1.1
+- Resolved: Inverted face bug for game objects with negative scales. (Reported by dreamora)
+- Resolved: Gizmos not shown on Mac. (Reported by dreamora)
+- Added a UnityScript implementation for the BulletExample.
+
+Version 1.0
+- Initial release.

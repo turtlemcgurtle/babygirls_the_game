@@ -1,0 +1,1857 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DecalSystem.Runtime</name>
+    </assembly>
+    <members>
+        <member name="T:Edelweiss.DecalSystem.UVRectangle">
+            <summary>
+            Instances of this class define an area within a material that is assigned in a <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see> instance.
+            They are used for all kinds of <see cref="T:Edelweiss.DecalSystem.GenericDecalProjectorBase">decal projectors</see>.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.UVRectangle.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.UVRectangle" /> class.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UVRectangle.name">
+            <summary>
+            The name for the identification in the inspector.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UVRectangle.lowerLeftUV">
+            <summary>
+            The lower left uv coordinate.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UVRectangle.upperRightUV">
+            <summary>
+            The upper right uv coordinate.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.UVRectangle.Size">
+            <summary>
+            The size of the <see cref="T:Edelweiss.DecalSystem.UVRectangle" />.
+            </summary>
+            <value>
+            The size.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.UVRectangle.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:Edelweiss.DecalSystem.DecalProjector">
+            <summary>
+            Decal projector.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.DecalProjector.#ctor(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Vector3,System.Single,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.DecalProjector" /> class.
+            </summary>
+            <param name="a_Position">
+            The position.
+            </param>
+            <param name="a_Rotation">
+            The rotation.
+            </param>
+            <param name="a_Scale">
+            The scale.
+            </param>
+            <param name="a_CullingAngle">
+            The culling angle.
+            </param>
+            <param name="a_meshOffset">
+            The mesh offset.
+            </param>
+            <param name="a_UV1RectangleIndex">
+            The uv1 rectangle index.
+            </param>
+            <param name="a_UV2RectangleIndex">
+            The uv2 rectangle index.
+            </param>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjector.position">
+            <summary>
+            The position.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjector.rotation">
+            <summary>
+            The rotation.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjector.scale">
+            <summary>
+            The scale.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjector.cullingAngle">
+            <summary>
+            The culling angle.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjector.meshOffset">
+            <summary>
+            The mesh offset.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjector.uv1RectangleIndex">
+            <summary>
+            The index of the <see cref="F:Edelweiss.DecalSystem.GenericDecals`3.uvRectangles">uv1 rectangle</see>.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjector.uv2RectangleIndex">
+            <summary>
+            The index of the <see cref="F:Edelweiss.DecalSystem.GenericDecals`3.uv2Rectangles">uv2 rectangle</see>.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalProjector.Position">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalProjector.Rotation">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalProjector.Scale">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalProjector.CullingAngle">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalProjector.MeshOffset">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalProjector.UV1RectangleIndex">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalProjector.UV2RectangleIndex">
+            <inheritdoc />
+        </member>
+        <member name="T:Edelweiss.DecalSystem.DecalProjectorBase">
+            <summary>
+            Decal projector base.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.DecalProjectorComponent">
+            <summary>
+            Decal projector component for meshes and terrains.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjectorComponent.affectMeshes">
+            <summary>
+            Should meshes be affected?
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.DecalProjectorComponent.affectTerrains">
+            <summary>
+            Should terrains be affected?
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.DecalProjectorGroup">
+            <summary>
+            Decal projector group.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.Decals">
+            <summary>
+            Decals.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.Decals.UseLightProbes">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.Decals.LightProbeAnchor">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.Decals.DecalsMeshRenderers">
+            <summary>
+            Gets the decals mesh renderers.
+            </summary>
+            <value>
+            The decals mesh renderers.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.Decals.IsDecalsMeshRenderer(UnityEngine.MeshRenderer)">
+            <summary>
+            Determines whether the specified a_MeshRenderer is a renderer of this instance.
+            </summary>
+            <returns>
+                <c>true</c> if the specified a_MeshRenderer is a renderer of this instance; otherwise, <c>false</c>.
+            </returns>
+            <param name="a_MeshRenderer">
+            The mesh renderer.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.Decals.ApplyMaterialToMeshRenderers">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.Decals.OnEnable">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.Decals.InitializeDecalsMeshRenderers">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.Decals.UpdateDecalsMeshes(Edelweiss.DecalSystem.DecalsMesh)">
+            <summary>
+            Updates the decals meshes.
+            </summary>
+            <param name="a_DecalsMesh">
+            The decals mesh.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.Decals.OptimizeDecalsMeshes">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.Decals.AddDecalsMeshRendererComponentToGameObject(UnityEngine.GameObject)">
+            <summary>
+            Adds a decals mesh renderer component to the game object.
+            </summary>
+            <returns>
+            The added decals mesh renderer component.
+            </returns>
+            <param name="a_GameObject">
+            The game object.
+            </param>
+        </member>
+        <member name="T:DS_DecalProjector">
+            <summary>
+            Instances of this class are used for projections onto meshes and terrains. They have to be placed
+            in child game objects of a <see cref="T:DS_Decals" /> instance.
+            For runtime purposes, <see cref="T:Edelweiss.DecalSystem.DecalProjector" /> instances may be more appropriate.
+            <seealso cref="T:Edelweiss.DecalSystem.DecalProjector" /></summary>
+        </member>
+        <member name="T:DS_DecalProjectorGroup">
+            <summary>
+            Instances of this class are used for the grouping of <see cref="T:DS_DecalProjector" /> child game objects.
+            Decal groups are only used in the Unity Editor to modify the transforms of all its child
+            <see cref="T:DS_DecalProjector">projectors</see> at once. Those objects have no effect at runtime.
+            </summary>
+        </member>
+        <member name="T:DS_Decals">
+            <summary>
+            Instances of this class are used to manage the visualization of
+            <see cref="T:Edelweiss.DecalSystem.DecalProjector">decal projections</see> onto meshes and terrains.
+            While the actual cutting operations are performed in <see cref="T:Edelweiss.DecalSystem.DecalsMesh">decals meshes</see>
+            and <see cref="T:Edelweiss.DecalSystem.DecalsMeshCutter">decals mesh cutters</see>, objects of this type provide the required
+            rendering infrastructure. <see cref="T:Edelweiss.DecalSystem.DecalsMesh">Decals meshes</see> can be
+            <see cref="M:Edelweiss.DecalSystem.Decals.UpdateDecalsMeshes(Edelweiss.DecalSystem.DecalsMesh)">applied</see> to
+            instances of this class and both the creation and destruction of the
+            <see cref="T:DS_DecalsMeshRenderer" /> objects is handled automatically.
+            For the visualization of projections onto skinned meshes, there is <see cref="T:DS_SkinnedDecals" />.
+            <seealso cref="T:DS_SkinnedDecals" /></summary>
+        </member>
+        <member name="M:DS_Decals.AddDecalsMeshRendererComponentToGameObject(UnityEngine.GameObject)">
+            <inheritdoc />
+        </member>
+        <member name="T:Edelweiss.DecalSystem.WrappedDecalProjector">
+            <summary>
+            Wrapper for <see cref="T:Edelweiss.DecalSystem.DecalProjectorComponent">DecalProjectorComponents</see> to
+            make them usable for <see cref="T:Edelweiss.DecalSystem.DecalsMesh">DecalsMeshes</see>.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.WrappedDecalProjector.#ctor(Edelweiss.DecalSystem.DecalProjectorComponent)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.WrappedDecalProjector" /> class.
+            </summary>
+            <param name="a_DecalProjector">
+            The decal projector.
+            </param>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedDecalProjector.WrappedDecalProjectorComponent">
+            <summary>
+            Gets the wrapped decal projector component.
+            </summary>
+            <value>
+            The wrapped decal projector component.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedDecalProjector.Position">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedDecalProjector.Rotation">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedDecalProjector.Scale">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedDecalProjector.CullingAngle">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedDecalProjector.MeshOffset">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedDecalProjector.UV1RectangleIndex">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedDecalProjector.UV2RectangleIndex">
+            <inheritdoc />
+        </member>
+        <member name="T:Edelweiss.DecalSystem.DecalsMesh">
+            <summary>
+            Decals mesh.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.DecalsMesh.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.DecalsMesh" /> class.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.DecalsMesh.#ctor(Edelweiss.DecalSystem.Decals)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.DecalsMesh" /> class.
+            </summary>
+            <param name="a_Decals">
+            The decals.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.DecalsMesh.Add(UnityEngine.Mesh,UnityEngine.Matrix4x4,UnityEngine.Matrix4x4)">
+            <summary>
+            Add the specified a_Mesh with a_WorldToMeshMatrix and a_MeshToWorldMatrix.
+            </summary>
+            <param name="a_Mesh">
+            The mesh.
+            </param>
+            <param name="a_WorldToMeshMatrix">
+            The world to mesh matrix.
+            </param>
+            <param name="a_MeshToWorldMatrix">
+            The mesh to world matrix.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Is thrown when the mesh argument is null.
+            </exception>
+            <exception cref="T:System.NullReferenceException">
+            Is thrown when <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> or any required mesh data is null.
+            </exception>
+            <exception cref="T:System.IndexOutOfRangeException">
+            Is thrown when the <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV1RectangleIndex" /> or the
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV2RectangleIndex" /> from the
+            <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> is invalid.
+            </exception>
+            <exception cref="T:System.FormatException">
+            Is thrown when the mesh format is not valid.
+            </exception>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.DecalsMesh.Add(UnityEngine.Vector3[],UnityEngine.Vector3[],UnityEngine.Vector4[],UnityEngine.Vector2[],UnityEngine.Vector2[],System.Int32[],UnityEngine.Matrix4x4,UnityEngine.Matrix4x4)">
+            <summary>
+            Add the specified a_Vertices, a_Normals, a_Tangents, a_UVs, a_UV2s, a_Triangles, a_WorldToMeshMatrix and a_MeshToWorldMatrix.
+            </summary>
+            <param name="a_Vertices">
+            The vertices.
+            </param>
+            <param name="a_Normals">
+            The normals.
+            </param>
+            <param name="a_Tangents">
+            The tangents.
+            </param>
+            <param name="a_UVs">
+            The UVs.
+            </param>
+            <param name="a_UV2s">
+            The UV2s.
+            </param>
+            <param name="a_Triangles">
+            The triangles.
+            </param>
+            <param name="a_WorldToMeshMatrix">
+            The world to mesh matrix.
+            </param>
+            <param name="a_MeshToWorldMatrix">
+            The mesh to world matrix.
+            </param>
+            <exception cref="T:System.NullReferenceException">
+            Is thrown when <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> is null.
+            </exception>
+            <exception cref="T:System.IndexOutOfRangeException">
+            Is thrown when the <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV1RectangleIndex" /> or the
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV2RectangleIndex" /> from the
+            <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> is invalid.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Is thrown when any required argument is null.
+            </exception>
+            <exception cref="T:System.FormatException">
+            Is thrown when the mesh format is not valid.
+            </exception>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.DecalsMesh.Add(UnityEngine.Terrain,UnityEngine.Matrix4x4)">
+            <summary>
+            Add the specified a_Terrain with a_TerrainToDecalsMatrix.
+            </summary>
+            <param name="a_Terrain">
+            The terrain.
+            </param>
+            <param name="a_TerrainToDecalsMatrix">
+            The terrain to decals matrix.
+            </param>
+            <exception cref="T:System.NullReferenceException">
+            Is thrown when <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> is null.
+            </exception>
+            <exception cref="T:System.IndexOutOfRangeException">
+            Is thrown when the <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV1RectangleIndex" /> or the
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV2RectangleIndex" /> from the
+            <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> is invalid.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Is thrown when the terrain argument is null.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the projection requires any data that does not exist for terrains.
+            </exception>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.DecalsMesh.OffsetActiveProjectorVertices">
+            <inheritdoc />
+        </member>
+        <member name="T:Edelweiss.DecalSystem.DecalsMeshCutter">
+            <summary>
+            Decals mesh cutter.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.FastDecalsMeshCutter">
+            <summary>
+            Optimized decals mesh cutter that eliminates less geometry compared to the <see cref="T:Edelweiss.DecalSystem.DecalsMeshCutter" />.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.DecalsMeshRenderer">
+            <summary>
+            Decals mesh renderer.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalsMeshRenderer.MeshFilter">
+            <summary>
+            Gets the mesh filter.
+            </summary>
+            <value>
+            The mesh filter.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.DecalsMeshRenderer.MeshRenderer">
+            <summary>
+            Gets the mesh renderer.
+            </summary>
+            <value>
+            The mesh renderer.
+            </value>
+        </member>
+        <member name="T:DS_DecalsMeshRenderer">
+            <summary>
+            Instances of this class wrap mesh renderers and filters to display a whole or parts of a
+            <see cref="T:Edelweiss.DecalSystem.DecalsMesh">decals mesh</see> object via a <see cref="T:DS_Decals" /> instance.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecalProjector`3">
+            <summary>
+            Generic base class for all decal projectors that are not used in game objects.
+            </summary>
+            <typeparam name="D">
+            The decals type.
+            </typeparam>
+            <typeparam name="P">
+            The projector type.
+            </typeparam>
+            <typeparam name="DM">
+            The decals mesh type.
+            </typeparam>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjector`3.DecalsMesh">
+            <summary>
+            Gets or sets the decals mesh.
+            </summary>
+            <value>
+            The decals mesh.
+            </value>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecalProjectorComponent`3">
+            <summary>
+            The generic base class for all decal projector components that are used in game objects.
+            </summary>
+            <typeparam name="D">
+            The decals type.
+            </typeparam>
+            <typeparam name="P">
+            The projector type.
+            </typeparam>
+            <typeparam name="DM">
+            The decals mesh type.
+            </typeparam>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalProjectorComponent`3.GetDecals">
+            <summary>
+            Gets the decals.
+            </summary>
+            <returns>
+            The decals.
+            </returns>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecals`3">
+            <summary>
+            The generic base class for all kinds of decals.
+            </summary>
+            <typeparam name="D">
+            The decals type.
+            </typeparam>
+            <typeparam name="P">
+            The projector type.
+            </typeparam>
+            <typeparam name="DM">
+            The decals mesh type.
+            </typeparam>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.DecalProjectorGroupBase">
+            <summary>
+            Decal projector group base.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.DecalProjectorGroupBase.GetDecalsBase">
+            <summary>
+            Gets the decals base.
+            </summary>
+            <returns>
+            The decals base.
+            </returns>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecalProjectorBase">
+            <summary>
+            The non generic base class of <see cref="T:Edelweiss.DecalSystem.GenericDecalProjector`3" />.
+            It defines most of the necessary functionality to
+            <see cref="T:Edelweiss.DecalSystem.GenericDecalsMeshCutter`3">cut meshes</see>.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.IsActiveProjector">
+            <summary>
+            Gets or sets a value indicating whether this instance is an active projector.
+            </summary>
+            <value>
+                <c>true</c> if this instance is an active projector; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.DecalsMeshLowerVertexIndex">
+            <summary>
+            Gets or sets the index of the decals mesh's lower vertex.
+            </summary>
+            <value>
+            The index of the decals mesh's lower vertex.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.DecalsMeshUpperVertexIndex">
+            <summary>
+            Gets or sets the index of the decals mesh's upper vertex.
+            </summary>
+            <value>
+            The index of the decals mesh upper vertex.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.DecalsMeshVertexCount">
+            <summary>
+            Gets the decals mesh's vertex count.
+            </summary>
+            <value>
+            The decals mesh's vertex count.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.DecalsMeshLowerTriangleIndex">
+            <summary>
+            Gets or sets the index of the decals mesh's lower triangle.
+            </summary>
+            <value>
+            The index of the decals mesh's lower triangle.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.DecalsMeshUpperTriangleIndex">
+            <summary>
+            Gets or sets the index of the decals mesh's upper triangle.
+            </summary>
+            <value>
+            The index of the decals mesh's upper triangle.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.DecalsMeshTriangleCount">
+            <summary>
+            Gets the decals mesh's triangle count.
+            </summary>
+            <value>
+            The decals mesh's triangle count.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.IsUV1ProjectionCalculated">
+            <summary>
+            Gets or sets a value indicating whether the UV1 projection is calculated.
+            </summary>
+            <value>
+                <c>true</c> if the UV1 projection is calculated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.IsUV2ProjectionCalculated">
+            <summary>
+            Gets or sets a value indicating whether the UV2 projection is calculated.
+            </summary>
+            <value>
+                <c>true</c> if the UV2 projection is calculated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.IsTangentProjectionCalculated">
+            <summary>
+            Gets or sets a value indicating whether the tangent projection is calculated.
+            </summary>
+            <value>
+                <c>true</c> if the tangent projection is calculated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.Position">
+            <summary>
+            Gets the position.
+            </summary>
+            <value>
+            The position.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.Rotation">
+            <summary>
+            Gets the rotation.
+            </summary>
+            <value>
+            The rotation.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.Scale">
+            <summary>
+            Gets the scale.
+            </summary>
+            <value>
+            The scale.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.CullingAngle">
+            <summary>
+            Gets the culling angle.
+            </summary>
+            <value>
+            The culling angle.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.MeshOffset">
+            <summary>
+            Gets the mesh offset.
+            </summary>
+            <value>
+            The mesh offset.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV1RectangleIndex">
+            <summary>
+            Gets the index of the <see cref="F:Edelweiss.DecalSystem.GenericDecalsBase.uvRectangles">UV1 rectangle</see>.
+            </summary>
+            <value>
+            The index of the <see cref="F:Edelweiss.DecalSystem.GenericDecalsBase.uvRectangles">UV1 rectangle</see>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV2RectangleIndex">
+            <summary>
+            Gets the index of the <see cref="F:Edelweiss.DecalSystem.GenericDecalsBase.uv2Rectangles">UV2 rectangle</see>.
+            </summary>
+            <value>
+            The index of the <see cref="F:Edelweiss.DecalSystem.GenericDecalsBase.uv2Rectangles">UV2 rectangle</see>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.ProjectorToWorldMatrix">
+            <summary>
+            Gets the projector to world matrix.
+            </summary>
+            <value>
+            The projector to world matrix.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.WorldToProjectorMatrix">
+            <summary>
+            Gets the world to projector matrix.
+            </summary>
+            <value>
+            The world to projector matrix.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalProjectorBase.WorldBounds">
+            <summary>
+            The bounding box of this instance in world space.
+            </summary>
+            <returns>
+            The world bounds.
+            </returns>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent">
+            <summary>
+            The non generic base class of <see cref="T:Edelweiss.DecalSystem.GenericDecalProjectorComponent`3" />.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.affectedLayers">
+            <summary>
+            The layers that are affected by this projector.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.affectInactiveRenderers">
+            <summary>
+            Should inactive renderers be affected?
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.affectOtherDecals">
+            <summary>
+            Should other decals be affected?
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.cullingAngle">
+            <summary>
+            The culling angle for the projector.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.meshOffset">
+            <summary>
+            The mesh offset.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.uv1RectangleIndex">
+            <summary>
+            The index of the <see cref="F:Edelweiss.DecalSystem.GenericDecalsBase.uvRectangles">uv1 rectangle</see>.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.uv2RectangleIndex">
+            <summary>
+            The index of the <see cref="F:Edelweiss.DecalSystem.GenericDecalsBase.uv2Rectangles">uv2 rectangle</see>.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.CachedTransform">
+            <summary>
+            Gets the cached transform.
+            </summary>
+            <value>
+            The cached transform.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.GetDecalsBase">
+            <summary>
+            Gets the decals base.
+            </summary>
+            <returns>
+            The decals base.
+            </returns>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.WorldBounds">
+            <summary>
+            The bounding box of this instance in world space.
+            </summary>
+            <returns>
+            The bounds.
+            </returns>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalProjectorBaseComponent.ProjectorToWorldMatrix">
+            <summary>
+            Gets the projector to world matrix.
+            </summary>
+            <returns>
+            The projector to world matrix.
+            </returns>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecalsBase">
+            <summary>
+            The non generic base class of <see cref="T:Edelweiss.DecalSystem.GenericDecals`3" />.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when mode changes are performed while this instance
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.IsLinkedWithADecalsMesh">is linked with a decals mesh</see>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when certain modes are set while the <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentProjectionMode" />
+            is not <see cref="F:Edelweiss.DecalSystem.ProjectionMode.Advanced" />.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when operations are performed at runtime that are only supported in the editor.
+            </exception>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsBase.c_MaximumVertexCount">
+            <summary>
+            Constant for maximum vertex count.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsBase.uvRectangles">
+            <summary>
+            The uv rectangles.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsBase.uv2Rectangles">
+            <summary>
+            The uv2 rectangles.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.CachedTransform">
+            <summary>
+            Gets the cached transform.
+            </summary>
+            <value>
+            The cached transform.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentMaterial">
+            <summary>
+            Gets or sets the current material.
+            </summary>
+            <value>
+            The current material.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.LinkedDecalsMesh">
+            <summary>
+            Gets or sets the decals mesh. Especially used for internal purposes.
+            </summary>
+            <value>
+            The decals mesh.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.IsLinkedWithADecalsMesh">
+            <summary>
+            Gets a value indicating whether this instance is used by a decals mesh instance.
+            </summary>
+            <value>
+                <c>true</c> if this instance is used by decals mesh; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.UseLightProbes">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase" /> uses light probes.
+            </summary>
+            <value>
+                <c>true</c> if uses light probes; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.LightProbeAnchor">
+            <summary>
+            Gets or sets the light probe anchor.
+            </summary>
+            <value>
+            The light probe anchor.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentProjectionMode">
+            <summary>
+            Gets or sets the current projection mode.
+            </summary>
+            <value>
+            The current projection mode.
+            </value>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while this instance
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.IsLinkedWithADecalsMesh">is linked with a decals mesh</see>.
+            You get rid of the link with <see cref="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.ClearAll" />.
+            </exception>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentUVMode">
+            <summary>
+            Gets or sets the current UV mode.
+            </summary>
+            <value>
+            The current UV mode.
+            </value>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while the <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentProjectionMode" />
+            is not <see cref="F:Edelweiss.DecalSystem.ProjectionMode.Advanced" />.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while this instance
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.IsLinkedWithADecalsMesh">is linked with a decals mesh</see>.
+            You get rid of the link with <see cref="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.ClearAll" />.
+            </exception>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentUV2Mode">
+            <summary>
+            Gets or sets the current UV2 mode.
+            </summary>
+            <value>
+            The current UV2 mode.
+            </value>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while the <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentProjectionMode" />
+            is not <see cref="F:Edelweiss.DecalSystem.ProjectionMode.Advanced" />.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while this instance
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.IsLinkedWithADecalsMesh">is linked with a decals mesh</see>.
+            You get rid of the link with <see cref="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.ClearAll" />.
+            </exception>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentNormalsMode">
+            <summary>
+            Gets or sets the current normals mode.
+            </summary>
+            <value>
+            The current normals mode.
+            </value>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while the <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentProjectionMode" />
+            is not <see cref="F:Edelweiss.DecalSystem.ProjectionMode.Advanced" />.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while this instance
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.IsLinkedWithADecalsMesh">is linked with a decals mesh</see>.
+            You get rid of the link with <see cref="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.ClearAll" />.
+            </exception>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentTangentsMode">
+            <summary>
+            Gets or sets the current tangents mode.
+            </summary>
+            <value>
+            The current tangents mode.
+            </value>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while the <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentProjectionMode" />
+            is not <see cref="F:Edelweiss.DecalSystem.ProjectionMode.Advanced" />.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when this mode is set while this instance
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.IsLinkedWithADecalsMesh">is linked with a decals mesh</see>.
+            You get rid of the link with <see cref="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.ClearAll" />.
+            </exception>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.AffectSameLODOnly">
+            <summary>
+            Gets or sets a value indicating whether this <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase" /> affects renderers from the same LOD only.
+            </summary>
+            <value>
+                <c>true</c> if renderers from the same LOD are affected only; otherwise, <c>false</c>.
+            </value>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the setter is called while the application is playing.
+            </exception>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.LightmapUpdateMode">
+            <summary>
+            Gets or sets the lightmap update mode.
+            </summary>
+            <value>
+            The lightmap update mode.
+            </value>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the setter is called while the application is playing.
+            </exception>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.AreDecalsMeshesOptimized">
+            <summary>
+            Gets a value indicating whether this <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals'</see> decals meshes are optimized.
+            </summary>
+            <value>
+                <c>true</c> if the decals meshes are optimized; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsBase.MeshAssetFolder">
+            <summary>
+            Gets or sets the mesh asset folder.
+            </summary>
+            <value>
+            The mesh asset folder.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsBase.OnEnable">
+            <summary>
+            Raises the enable event.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsBase.InitializeDecalsMeshRenderers">
+            <summary>
+            Initializes the decals mesh renderers.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsBase.OptimizeDecalsMeshes">
+            <summary>
+            Optimizes the decals meshes.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsBase.SetDecalsMeshesAreNotOptimized">
+            <summary>
+            Sets the decals meshes are not optimized.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsBase.ApplyMaterialToMeshRenderers">
+            <summary>
+            Applies the material to mesh renderers.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecalsMeshBase">
+            <summary>
+            The non generic base class of <see cref="T:Edelweiss.DecalSystem.GenericDecalsMesh`3" />.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the <see cref="P:Edelweiss.DecalSystem.GenericDecalsMeshBase.UV2s" /> should be computed for <see cref="F:Edelweiss.DecalSystem.UV2Mode.Lightmapping" /> while the application is running.
+            </exception>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsMeshBase.m_UVs">
+            <summary>
+            The UVs.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsMeshBase.m_UV2s">
+            <summary>
+            The UV2s.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsMeshBase.m_Vertices">
+            <summary>
+            The vertices.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsMeshBase.m_Normals">
+            <summary>
+            The normals.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsMeshBase.m_Tangents">
+            <summary>
+            The tangents.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsMeshBase.m_Triangles">
+            <summary>
+            The triangles.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsMeshBase.UVs">
+            <summary>
+            Gets the UVs.
+            </summary>
+            <value>
+            The Uvs.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsMeshBase.UV2s">
+            <summary>
+            Gets the UV2s.
+            </summary>
+            <value>
+            The UV2s.
+            </value>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the application is executed and the
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalsBase.CurrentUV2Mode" /> is
+            <see cref="F:Edelweiss.DecalSystem.UV2Mode.Lightmapping" />,
+            because the lightmap can only be computed in the editor.
+            </exception>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsMeshBase.Vertices">
+            <summary>
+            Gets the vertices.
+            </summary>
+            <value>
+            The vertices.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsMeshBase.Normals">
+            <summary>
+            Gets the normals.
+            </summary>
+            <value>
+            The normals.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsMeshBase.Tangents">
+            <summary>
+            Gets the tangents.
+            </summary>
+            <value>
+            The tangents.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsMeshBase.Triangles">
+            <summary>
+            Gets the triangles.
+            </summary>
+            <value>
+            The triangles.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMeshBase.RecalculateUVs">
+            <summary>
+            Recalculates the UVs.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMeshBase.HasUV2LightmappingMode">
+            <summary>
+            Determines whether lightmapping is used for the UV2 mode.
+            </summary>
+            <returns>
+                <c>true</c> if lightmapping is used in the UV2 mode; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMeshBase.RecalculateUV2s">
+            <summary>
+            Recalculates the U v2s.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMeshBase.RecalculateTangents">
+            <summary>
+            Recalculates the tangents.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecalsMesh`3">
+            <summary>
+            Generic decals mesh.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">
+            Is thrown when the argument null exception.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the invalid operation exception.
+            </exception>
+            <exception cref="T:System.NullReferenceException">
+            Is thrown when the null reference exception.
+            </exception>
+            <typeparam name="D">
+            The decals type.
+            </typeparam>
+            <typeparam name="P">
+            The projector type.
+            </typeparam>
+            <typeparam name="DM">
+            The decals mesh type.
+            </typeparam>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.GenericDecalsMesh`3.m_Decals">
+            <summary>
+            The decals.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsMesh`3.Decals">
+            <summary>
+            Gets the decals.
+            </summary>
+            <value>
+            The the linked decals.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.GenericDecalsMesh`3.ActiveDecalProjector">
+            <summary>
+            Gets the active decal projector.
+            </summary>
+            <value>
+            The active decal projector.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.Initialize(`0)">
+            <summary>
+            Initialize the specified a_Decals.
+            </summary>
+            <param name="a_Decals">
+            A decals.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.RecalculateUVs">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.HasUV2LightmappingMode">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.RecalculateUV2s">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.RecalculateTangents">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.CalculateProjectedUV1ForActiveProjector">
+            <summary>
+            Calculates the projected uv1 for the active projector.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.CalculateProjectedUV2ForActiveProjector">
+            <summary>
+            Calculates the projected uv2 for the active projector.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.ClearAll">
+            <summary>
+            Clears all data including the connection to the <see cref="P:Edelweiss.DecalSystem.GenericDecalsMesh`3.Decals">decals link</see>.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.ContainsProjector(`1)">
+            <summary>
+            Is a_Projector used in this instance?
+            </summary>
+            <returns>
+            The projector.
+            </returns>
+            <param name="a_Projector">
+            If set to <c>true</c>, a_Projector belongs to this instance.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.AddProjector(`1)">
+            <summary>
+            Adds the projector.
+            </summary>
+            <param name="a_Projector">
+            The projector.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Is thrown when the argument is null.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the projector is already used in another instance of this class.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the <see cref="P:Edelweiss.DecalSystem.GenericDecalsMesh`3.Decals">Decals'</see><see cref="P:Edelweiss.DecalSystem.GenericDecalsMesh`3.LinkedDecalsMesh" /> is not this instance.
+            </exception>
+            <exception cref="T:System.NullReferenceException">
+            Is thrown if <see cref="P:Edelweiss.DecalSystem.GenericDecalsMesh`3.Decals" /> is null.
+            </exception>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.RemoveProjector(`1)">
+            <summary>
+            Removes the projector.
+            </summary>
+            <param name="a_Projector">
+            The projector that has to be removed.
+            </param>
+            <exception cref="T:System.InvalidOperationException">
+            Is thrown when the projector does not belong to this instance.
+            </exception>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.OffsetActiveProjectorVertices">
+            <summary>
+            Offsets the active projector's vertices.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.RemoveTriangleAt(System.Int32)">
+            <summary>
+            Removes the triangle at a_Index.
+            </summary>
+            <param name="a_Index">
+            The index.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.RemoveTrianglesAt(System.Int32,System.Int32)">
+            <summary>
+            Removes a_Count triangles starting at a_Index.
+            </summary>
+            <param name="a_Index">
+            First index to be removed.
+            </param>
+            <param name="a_Count">
+            Triangle count to be removed.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.RemoveAndAdjustIndices(System.Int32,Edelweiss.DecalSystem.RemovedIndices)">
+            <summary>
+            Removes and adjusts the indices.
+            This method is only supposed to be used by the DecalsMeshCutter!
+            </summary>
+            <param name="a_LowerTriangleIndex">
+            The lower triangle index.
+            </param>
+            <param name="a_RemovedIndices">
+            The indices to be removed.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMesh`3.RemoveIndices(Edelweiss.DecalSystem.RemovedIndices)">
+            <summary>
+            Removes the indices.
+            This method is only supposed to be used by the DecalsMeshCutter!
+            </summary>
+            <param name="a_RemovedIndices">
+            A indices to be removed.
+            </param>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.GenericDecalsMeshCutter`3">
+            <summary>
+            Generic decals mesh cutter.
+            </summary>
+            <typeparam name="D">
+            The decals type.
+            </typeparam>
+            <typeparam name="P">
+            The projector type.
+            </typeparam>
+            <typeparam name="DM">
+            The decals mesh type.
+            </typeparam>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.GenericDecalsMeshCutter`3.CutDecalsPlanes(`2)">
+            <summary>
+            Cuts the decals planes for the <see cref="P:Edelweiss.DecalSystem.GenericDecalProjector`3.ActiveDecalProjector" />
+            of the argument.
+            </summary>
+            <param name="a_DecalsMesh">
+            A decals mesh.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            Is thrown when the argument is null.
+            </exception>
+            <exception cref="T:System.NullReferenceException">
+            Is thrown when the argument's <see cref="P:Edelweiss.DecalSystem.GenericDecalProjector`3.ActiveDecalProjector" />
+            is null.
+            </exception>
+        </member>
+        <member name="T:DS_SkinnedDecalProjector">
+            <summary>
+            Instances of this class are used for projections onto skinned meshes in the Unity Editor. They are supposed to be placed
+            in child game objects of a <see cref="T:DS_SkinnedDecals" /> object.
+            For runtime purposes, <see cref="T:Edelweiss.DecalSystem.SkinnedDecalProjector" /> instances may be more appropriate.
+            <seealso cref="T:Edelweiss.DecalSystem.SkinnedDecalProjector" /></summary>
+        </member>
+        <member name="T:DS_SkinnedDecalProjectorGroup">
+            <summary>
+            Instances of this class are used for the grouping of <see cref="T:DS_SkinnedDecalProjector" />
+            instances in the Unity Editor to modify all relevant transforms at once. Those objects have no effect at runtime.
+            </summary>
+        </member>
+        <member name="T:DS_SkinnedDecals">
+            <summary>
+            Instances of this class are used to manage the visualization of
+            <see cref="T:Edelweiss.DecalSystem.SkinnedDecalProjector">skinned decal projections</see> onto skinned meshes.
+            While the actual cutting operations are performed in <see cref="T:Edelweiss.DecalSystem.SkinnedDecalsMesh">skinned decals meshes</see>
+            and <see cref="T:Edelweiss.DecalSystem.SkinnedDecalsMeshCutter">skinned decals mesh cutters</see>, objects of this type provide a rendering
+            infrastructure. <see cref="T:Edelweiss.DecalSystem.SkinnedDecalsMesh">Skinned decals meshes</see> can be
+            <see cref="M:Edelweiss.DecalSystem.SkinnedDecals.UpdateSkinnedDecalsMeshes(Edelweiss.DecalSystem.SkinnedDecalsMesh)">applied</see> to
+            instances of this class and both the creation and destruction of the
+            <see cref="T:DS_SkinnedDecalsMeshRenderer" /> objects is handled automatically.
+            For the visualization of projections onto meshes and terrains, there is <see cref="T:DS_Decals" />.
+            <seealso cref="T:DS_Decals" /></summary>
+        </member>
+        <member name="M:DS_SkinnedDecals.AddSkinnedDecalsMeshRendererComponentToGameObject(UnityEngine.GameObject)">
+            <inheritdoc />
+        </member>
+        <member name="T:Edelweiss.DecalSystem.SkinnedDecalProjector">
+            <summary>
+            Skinned decal projector.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecalProjector.#ctor(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Vector3,System.Single,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.SkinnedDecalProjector" /> class.
+            </summary>
+            <param name="a_Position">
+            The position.
+            </param>
+            <param name="a_Rotation">
+            The rotation.
+            </param>
+            <param name="a_Scale">
+            The scale.
+            </param>
+            <param name="a_CullingAngle">
+            The culling angle.
+            </param>
+            <param name="a_meshOffset">
+            The mesh offset.
+            </param>
+            <param name="a_UV1RectangleIndex">
+            The uv1 rectangle index.
+            </param>
+            <param name="a_UV2RectangleIndex">
+            The uv2 rectangle index.
+            </param>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.SkinnedDecalProjector.position">
+            <summary>
+            The position.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.SkinnedDecalProjector.rotation">
+            <summary>
+            The rotation.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.SkinnedDecalProjector.scale">
+            <summary>
+            The scale.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.SkinnedDecalProjector.cullingAngle">
+            <summary>
+            The culling angle.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.SkinnedDecalProjector.meshOffset">
+            <summary>
+            The mesh offset.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.SkinnedDecalProjector.uv1RectangleIndex">
+            <summary>
+            The index of the uv1 rectangle.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.SkinnedDecalProjector.uv2RectangleIndex">
+            <summary>
+            The index of the uv2 rectangle.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjector.Position">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjector.Rotation">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjector.Scale">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjector.CullingAngle">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjector.MeshOffset">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjector.UV1RectangleIndex">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjector.UV2RectangleIndex">
+            <inheritdoc />
+        </member>
+        <member name="T:Edelweiss.DecalSystem.SkinnedDecalProjectorBase">
+            <summary>
+            Skinned decal projector base.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjectorBase.DecalsMeshLowerBonesIndex">
+            <summary>
+            Gets or sets the index of the decals mesh lower bones.
+            </summary>
+            <value>
+            The index of the decals mesh lower bones.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjectorBase.DecalsMeshUpperBonesIndex">
+            <summary>
+            Gets or sets the index of the decals mesh upper bones.
+            </summary>
+            <value>
+            The index of the decals mesh upper bones.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalProjectorBase.DecalsMeshBonesCount">
+            <summary>
+            Gets the decals mesh bones count.
+            </summary>
+            <value>
+            The decals mesh bones count.
+            </value>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.SkinnedDecalProjectorComponent">
+            <summary>
+            Skinned decal projector component.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.SkinnedDecalProjectorGroup">
+            <summary>
+            Skinned decal projector group.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.SkinnedDecals">
+            <summary>
+            Skinned decals.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecals.UseLightProbes">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecals.LightProbeAnchor">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecals.SkinnedDecalsMeshRenderers">
+            <summary>
+            Gets the skinned decals mesh renderers.
+            </summary>
+            <value>
+            The skinned decals mesh renderers.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecals.IsSkinnedDecalsMeshRenderer(UnityEngine.SkinnedMeshRenderer)">
+            <summary>
+            Determines whether the specified a_SkinnedMeshRenderer is a renderer of this instance.
+            </summary>
+            <returns>
+                <c>true</c> if the specified a_SkinnedMeshRenderer is a renderer of this instance; otherwise, <c>false</c>.
+            </returns>
+            <param name="a_SkinnedMeshRenderer">
+            The skinned mesh renderer.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecals.ApplyMaterialToMeshRenderers">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecals.OnEnable">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecals.InitializeDecalsMeshRenderers">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecals.UpdateSkinnedDecalsMeshes(Edelweiss.DecalSystem.SkinnedDecalsMesh)">
+            <summary>
+            Updates the skinned decals meshes.
+            </summary>
+            <param name="a_SkinnedDecalsMesh">
+            The skinned decals mesh.
+            </param>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecals.OptimizeDecalsMeshes">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecals.AddSkinnedDecalsMeshRendererComponentToGameObject(UnityEngine.GameObject)">
+            <summary>
+            Adds a skinned decals mesh renderer component to the game object.
+            </summary>
+            <returns>
+            The added skinned decals mesh renderer component.
+            </returns>
+            <param name="a_GameObject">
+            The game object.
+            </param>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector">
+            <summary>
+            Wrapper for <see cref="T:Edelweiss.DecalSystem.SkinnedDecalProjectorComponent">SkinnedDecalProjectorComponents</see> to
+            make them usable for <see cref="T:Edelweiss.DecalSystem.SkinnedDecalsMesh">SkinnedDecalsMeshes</see>.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.#ctor(Edelweiss.DecalSystem.SkinnedDecalProjectorComponent)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector" /> class.
+            </summary>
+            <param name="a_DecalProjector">
+            The decal projector.
+            </param>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.WrappedSkinnedDecalProjectorComponent">
+            <summary>
+            Gets the wrapped skinned decal projector component.
+            </summary>
+            <value>
+            The wrapped skinned decal projector component.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.Position">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.Rotation">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.Scale">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.CullingAngle">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.MeshOffset">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.UV1RectangleIndex">
+            <inheritdoc />
+        </member>
+        <member name="P:Edelweiss.DecalSystem.WrappedSkinnedDecalProjector.UV2RectangleIndex">
+            <inheritdoc />
+        </member>
+        <member name="T:DS_SkinnedDecalsMeshRenderer">
+            <summary>
+            Instances of this class wrap skinned mesh renderers to display a whole or parts of a
+            <see cref="T:Edelweiss.DecalSystem.SkinnedDecalsMesh">skinned decals mesh</see> object via a <see cref="T:DS_SkinnedDecals" /> instance.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.SkinnedDecalsMeshRenderer">
+            <summary>
+            Skinned decals mesh renderer.
+            </summary>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalsMeshRenderer.SkinnedMeshRenderer">
+            <summary>
+            Gets the skinned mesh renderer.
+            </summary>
+            <value>
+            The skinned mesh renderer.
+            </value>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.SkinnedDecalsMesh">
+            <summary>
+            Skinned decals mesh.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecalsMesh.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.SkinnedDecalsMesh" /> class.
+            </summary>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecalsMesh.#ctor(Edelweiss.DecalSystem.SkinnedDecals)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Edelweiss.DecalSystem.SkinnedDecalsMesh" /> class.
+            </summary>
+            <param name="a_Decals">
+            The decals.
+            </param>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalsMesh.OriginalVertices">
+            <summary>
+            Gets the original vertices.
+            </summary>
+            <value>
+            The original vertices.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalsMesh.BoneWeights">
+            <summary>
+            Gets the bone weights.
+            </summary>
+            <value>
+            The bone weights.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalsMesh.Bones">
+            <summary>
+            Gets the bones.
+            </summary>
+            <value>
+            The bones.
+            </value>
+        </member>
+        <member name="P:Edelweiss.DecalSystem.SkinnedDecalsMesh.BindPoses">
+            <summary>
+            Gets the bind poses.
+            </summary>
+            <value>
+            The bind poses.
+            </value>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecalsMesh.Add(UnityEngine.Mesh,UnityEngine.Transform[],UnityEngine.Matrix4x4,UnityEngine.Matrix4x4)">
+            <summary>
+            Add the specified a_Mesh, a_Bones with a_MeshToWorldMatrix and a_WorldToMeshMatrix.
+            </summary>
+            <param name="a_Mesh">
+            The mesh.
+            </param>
+            <param name="a_Bones">
+            The bones.
+            </param>
+            <param name="a_MeshToWorldMatrix">
+            The mesh to world matrix.
+            </param>
+            <param name="a_WorldToMeshMatrix">
+            The world to mesh matrix.
+            </param>
+            <exception cref="T:System.NullReferenceException">
+            Is thrown when <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> or any required mesh data is null.
+            </exception>
+            <exception cref="T:System.IndexOutOfRangeException">
+            Is thrown when the <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV1RectangleIndex" /> or the
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV2RectangleIndex" /> from the
+            <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> is invalid.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Is thrown when the mesh argument is null.
+            </exception>
+            <exception cref="T:System.FormatException">
+            Is thrown when the mesh format is not valid.
+            </exception>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecalsMesh.Add(UnityEngine.Vector3[],UnityEngine.Vector3[],UnityEngine.Vector4[],UnityEngine.Vector2[],UnityEngine.Vector2[],UnityEngine.BoneWeight[],System.Int32[],UnityEngine.Transform[],UnityEngine.Matrix4x4[],UnityEngine.Matrix4x4,UnityEngine.Matrix4x4)">
+            <summary>
+            Add the specified a_Vertices, a_Normals, a_Tangents, a_UVs, a_UV2s, a_BoneWeights, a_Triangles, a_Bones,
+            a_BindPoses with a_MeshToWorldMatrix and a_WorldToMeshMatrix.
+            </summary>
+            <param name="a_Vertices">
+            The vertices.
+            </param>
+            <param name="a_Normals">
+            The normals.
+            </param>
+            <param name="a_Tangents">
+            The tangents.
+            </param>
+            <param name="a_UVs">
+            The UVs.
+            </param>
+            <param name="a_UV2s">
+            The UV2s.
+            </param>
+            <param name="a_BoneWeights">
+            The bone weights.
+            </param>
+            <param name="a_Triangles">
+            The triangles.
+            </param>
+            <param name="a_Bones">
+            The bones.
+            </param>
+            <param name="a_BindPoses">
+            The bind poses.
+            </param>
+            <param name="a_MeshToWorldMatrix">
+            The mesh to world matrix.
+            </param>
+            <param name="a_WorldToMeshMatrix">
+            The world to mesh matrix.
+            </param>
+            <exception cref="T:System.NullReferenceException">
+            Is thrown when <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> is null.
+            </exception>
+            <exception cref="T:System.IndexOutOfRangeException">
+            Is thrown when the <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV1RectangleIndex" /> or the
+            <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV2RectangleIndex" /> from the
+            <see cref="P:Edelweiss.DecalSystem.DecalsMesh.ActiveDecalProjector" /> is invalid.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            Is thrown when any required argument is null.
+            </exception>
+            <exception cref="T:System.FormatException">
+            Is thrown when the mesh format is not valid.
+            </exception>
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecalsMesh.ClearAll">
+            <inheritdoc />
+        </member>
+        <member name="M:Edelweiss.DecalSystem.SkinnedDecalsMesh.OffsetActiveProjectorVertices">
+            <inheritdoc />
+        </member>
+        <member name="T:Edelweiss.DecalSystem.SkinnedDecalsMeshCutter">
+            <summary>
+            Skinned decals mesh cutter.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.LightmapUpdateMode">
+            <summary>
+            The lightmap update mode for the uv2's.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.LightmapUpdateMode.Always">
+            <summary>
+            Update the uv2's for the lightmap after each change.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.LightmapUpdateMode.OnOptimize">
+            <summary>
+            Update the uv2's for the lightmap only on optimize.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.NormalsMode">
+            <summary>
+            The mode for the normals. Defined in all kinds of <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see>
+            and is used within the <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see>'
+            <see cref="T:Edelweiss.DecalSystem.GenericDecalProjectorBase">projectors</see>.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.NormalsMode.None">
+            <summary>
+            Don't use the normals.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.NormalsMode.Target">
+            <summary>
+            Use the target's normals.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.ProjectionMode">
+            <summary>
+            Predefined projection modes. A projection mode consists of a <see cref="T:Edelweiss.DecalSystem.NormalsMode" />,
+            <see cref="T:Edelweiss.DecalSystem.TangentsMode" />, <see cref="T:Edelweiss.DecalSystem.UVMode" /> and
+            <see cref="T:Edelweiss.DecalSystem.UV2Mode" />.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.ProjectionMode.Diffuse">
+            <summary>
+            Predefined projection for a diffuse material.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.ProjectionMode.BumpedDiffuse">
+            <summary>
+            Predefined projection for a bumped material.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.ProjectionMode.LightmappedDiffuse">
+            <summary>
+            Predefined projection for a lightmapped diffuse material.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.ProjectionMode.LightmappedBumpedDiffuse">
+            <summary>
+            Predefined projection for a lightmapped bumped material.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.ProjectionMode.BumpOfTarget">
+            <summary>
+            Predefined projection for a bumped material that uses the target's bump map.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.ProjectionMode.Advanced">
+            <summary>
+            Custom definition of the projection.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.TangentsMode">
+            <summary>
+            The mode for the tangents. Defined in all kinds of <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see>
+            and is used within the <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see>'
+            <see cref="T:Edelweiss.DecalSystem.GenericDecalProjectorBase">projectors</see>.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.TangentsMode.None">
+            <summary>
+            Don't use the tangents.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.TangentsMode.Project">
+            <summary>
+            Project the tangents.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.TangentsMode.Target">
+            <summary>
+            Use the target's tangents.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.UV2Mode">
+            <summary>
+            The mode for the uv2's. Defined in all kinds of <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see>
+            and is used within the <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see>'
+            <see cref="T:Edelweiss.DecalSystem.GenericDecalProjectorBase">projectors</see>.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UV2Mode.None">
+            <summary>
+            Don't use the uv2's.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UV2Mode.Project">
+            <summary>
+            Project the <see cref="T:Edelweiss.DecalSystem.UVRectangle" /> from the <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals'</see> array <see cref="F:Edelweiss.DecalSystem.GenericDecalsBase.uv2Rectangles" /> at the index <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV2RectangleIndex" /> of the <see cref="T:Edelweiss.DecalSystem.GenericDecalProjectorBase">projector</see>.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UV2Mode.TargetUV">
+            <summary>
+            Use the uv's of the target.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UV2Mode.TargetUV2">
+            <summary>
+            Use the uv2's of the target.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UV2Mode.Lightmapping">
+            <summary>
+            Generate the uv2's for lightmapping.
+            </summary>
+        </member>
+        <member name="T:Edelweiss.DecalSystem.UVMode">
+            <summary>
+            The mode for the uv's. Defined in all kinds of <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see>
+            and is used within the <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals</see>'
+            <see cref="T:Edelweiss.DecalSystem.GenericDecalProjectorBase">projectors</see>.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UVMode.Project">
+            <summary>
+            Project the <see cref="T:Edelweiss.DecalSystem.UVRectangle" /> from the <see cref="T:Edelweiss.DecalSystem.GenericDecalsBase">decals'</see> array <see cref="F:Edelweiss.DecalSystem.GenericDecalsBase.uvRectangles" /> at the index <see cref="P:Edelweiss.DecalSystem.GenericDecalProjectorBase.UV1RectangleIndex" /> of the <see cref="T:Edelweiss.DecalSystem.GenericDecalProjectorBase">projector</see>.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UVMode.TargetUV">
+            <summary>
+            Use the uv's of the target.
+            </summary>
+        </member>
+        <member name="F:Edelweiss.DecalSystem.UVMode.TargetUV2">
+            <summary>
+            Use the uv2's of the target.
+            </summary>
+        </member>
+    </members>
+</doc>
