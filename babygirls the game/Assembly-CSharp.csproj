@@ -47,12 +47,15 @@
      <Compile Include="Assets\_Scripts\Multiplayer\MultiplayerScript.cs" />
      <Compile Include="Assets\_Scripts\Player\CameraScript.cs" />
      <Compile Include="Assets\_Scripts\Player\CursorLock.cs" />
+     <Compile Include="Assets\_Scripts\Player\EditorMode.cs" />
      <Compile Include="Assets\_Scripts\Player\FireRocket.cs" />
+     <Compile Include="Assets\_Scripts\Player\FireWeapon.cs" />
      <Compile Include="Assets\_Scripts\Player\HealthAndDamage.cs" />
      <Compile Include="Assets\_Scripts\Player\HealthBar.cs" />
      <Compile Include="Assets\_Scripts\Player\MovementUpdate.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerDataClass.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerDatabase.cs" />
+     <Compile Include="Assets\_Scripts\Player\PlayerHUDWeapon.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerLabel.cs" />
      <Compile Include="Assets\_Scripts\Player\PlayerName.cs" />
      <Compile Include="Assets\_Scripts\Player\RocketTemp.cs" />

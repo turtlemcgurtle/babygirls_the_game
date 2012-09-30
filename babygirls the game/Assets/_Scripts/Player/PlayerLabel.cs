@@ -111,14 +111,10 @@ public class PlayerLabel : MonoBehaviour {
 		//the health bar length to 1 if the the player's health falls below 1.
 		
 		if(HDScript.myHealth < 1)
-		{
 			healthBarLength = 1;	
-		}
 		
 		if(HDScript.myHealth >= 1)
-		{
 			healthBarLength = (HDScript.myHealth / HDScript.maxHealth) * 100;	
-		}
 	}
 	
 	
@@ -126,35 +122,29 @@ public class PlayerLabel : MonoBehaviour {
 	{
 		//Only display the player's name if they are in front of the camera and also the 
 		//player should be in front of the camera by at least minimumZ.
-		
 		if(cameraRelativePosition.z > minimumZ)
 		{
 			//Set the world position to be just a bit above the player.
-			
 			worldPosition = new Vector3(myTransform.position.x, myTransform.position.y + adjustment,
 			                            myTransform.position.z);
 			
 			//Convert the world position to a point on the screen.
-			
 			screenPosition = myCamera.WorldToScreenPoint(worldPosition);
 			
-			
 			//Draw the health bar and the grey bar behind it.
-			
 			GUI.Box(new Rect(screenPosition.x - healthBarLeft / 2, 
 			                 Screen.height - screenPosition.y - barTop,
 			                 100, healthBarHeight), "");
 
 			GUI.DrawTexture(new Rect(screenPosition.x - healthBarLeft / 2,
 			                         Screen.height - screenPosition.y - barTop,
-			                         healthBarLength, healthBarHeight), healthTex);		
+			                         healthBarLength, healthBarHeight), healthTex);
 			
 			
 			//Draw the player's name above them.
-			
 			GUI.Label(new Rect(screenPosition.x - labelWidth / 2,
 			                   Screen.height - screenPosition.y - labelTop,
-			                   labelWidth, labelHeight), playerName, myStyle);
+			                   labelWidth, labelHeight), playerName, "");
 			GUI.Label(new Rect(screenPosition.x - labelWidth / 2,
 			                   Screen.height - screenPosition.y - labelTop,
 			                   labelWidth + 2, labelHeight + 2), playerName, myStyle);

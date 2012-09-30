@@ -30,8 +30,7 @@ public class MovementUpdate : MonoBehaviour {
 			myTransform = transform;
 			
 			
-			//Ensure taht everyone sees the player at the correct location
-			//the moment they spawn.
+			//Ensure that everyone sees the player at the correct location the moment they spawn.
 			
 			networkView.RPC("updateMovement", RPCMode.OthersBuffered,
 			                myTransform.position, myTransform.rotation);

@@ -14,19 +14,16 @@ public class HealthBar : MonoBehaviour {
 	
 	//Variables Start-------------------------------------------
 	
-	//The healthbar texture is attached to this in the
-	//inspector.
+	//The healthbar texture is attached to this in the inspector.
 	public Texture healthTex;
-	
 	
 	//These are used in calculating and displaying the health.
 	private float health;
 	private int healthForDisplay;
 	
-	
 	//These are used in defining the StatDisplay box.
-	private int boxWidth = 155;
-	private int boxHeight = 35;
+	private int boxWidth = 32;
+	private int boxHeight = 128;
 	private int labelHeight = 20;
 	private int labelWidth = 35;
 	private int padding = 10;
@@ -81,7 +78,6 @@ public class HealthBar : MonoBehaviour {
 	
 	void OnGUI ()
 	{
-		//GUI.matrix = Matrix4x4.Scale(Vector3( Screen.width / 1024, Screen.height / 768,1));
 		Vector3 scale = new Vector3((float)Screen.width / 1024.0f, 
 		                            (float)Screen.height / 768.0f, 
 		                            1.0f);

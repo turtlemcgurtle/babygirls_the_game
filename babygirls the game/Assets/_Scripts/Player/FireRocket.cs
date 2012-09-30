@@ -16,7 +16,7 @@ public class FireRocket : MonoBehaviour
 	
 	private Vector3 launchPosition = new Vector3(); //position rocket will instantiate from
 	
-	private float fireRate = 0.2f;
+	public float fireRate = 0.5f;
 	private float nextFire = 0;
 	
 	private bool iAmRed = false;
@@ -31,8 +31,7 @@ public class FireRocket : MonoBehaviour
 			
 			cameraHeadTransform = myTransform.FindChild("CameraHead");
 			
-			//Find the SpawnManager and access the SpawnScript to
-			//find out which team the player is on.
+			//Find the SpawnManager and access the SpawnScript to find out which team the player is on.
 			GameObject spawnManager = GameObject.Find("SpawnManager");
 			SpawnScript spawnScript = spawnManager.GetComponent<SpawnScript>();
 			
@@ -76,7 +75,6 @@ public class FireRocket : MonoBehaviour
 			                                                    myTransform.eulerAngles.y, 0),
 				                myTransform.name, "blue");
 			}
-			
 		}
 	}
 	
@@ -89,9 +87,7 @@ public class FireRocket : MonoBehaviour
 		GameObject go = Instantiate(rocket, position, rotation) as GameObject;
 		
 		RocketTemp rScript = go.GetComponent<RocketTemp>();
-		
 		rScript.myOriginator = originatorName;
-		
 		rScript.team = team;
 	}
 }

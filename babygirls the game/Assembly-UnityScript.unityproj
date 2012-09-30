@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\Player\Crosshair.js" />
+     <Compile Include="Assets\_Scripts\Turrets\BaseTurret1.js" />
+     <Compile Include="Assets\__TO DO.js" />
      <None Include="Assets\Plugins\Decal System\Shader\Decal-Alpha-Diffuse.shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Decal-Alpha-VertexLit.shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Mobile\Mobile-Decal-AlphaTest-Bumped.shader" />
