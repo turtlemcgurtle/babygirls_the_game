@@ -48,7 +48,6 @@
      <Compile Include="Assets\_Scripts\Player\CameraScript.cs" />
      <Compile Include="Assets\_Scripts\Player\CursorLock.cs" />
      <Compile Include="Assets\_Scripts\Player\EditorMode.cs" />
-     <Compile Include="Assets\_Scripts\Player\FireRocket.cs" />
      <Compile Include="Assets\_Scripts\Player\FireWeapon.cs" />
      <Compile Include="Assets\_Scripts\Player\HealthAndDamage.cs" />
      <Compile Include="Assets\_Scripts\Player\HealthBar.cs" />
@@ -60,6 +59,9 @@
      <Compile Include="Assets\_Scripts\Player\PlayerName.cs" />
      <Compile Include="Assets\_Scripts\Player\RocketTemp.cs" />
      <Compile Include="Assets\_Scripts\Player\SpawnScript.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\FireDeployer.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\FireRocket.cs" />
+     <Compile Include="Assets\_Scripts\Weapons\FireTrack.cs" />
      <None Include="Assets\Plugins\Decal System\Shader\Decal-Alpha-Diffuse.shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Decal-Alpha-VertexLit.shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Mobile\Mobile-Decal-AlphaTest-Bumped.shader" />
