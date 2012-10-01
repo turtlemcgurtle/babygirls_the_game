@@ -1,6 +1,13 @@
 using UnityEngine;
 using System.Collections;
 
+/// <summary>
+/// The plan for this weapon is it will be how the player deploys deployables, be it a Cube/Sphere/ect.
+/// 
+/// ATM they only need to left click once to place it down, plan on using mouse wheel or mouse2 to cycle through
+/// the available deployables.
+/// </summary>
+
 public class FireDeployer : MonoBehaviour
 {
 	#region Variables
