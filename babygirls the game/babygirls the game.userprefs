@@ -1,11 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\Player\EditorMode.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\Player\PlayerLabel.cs">
     <Files>
-      <File FileName="Assets\__TO DO.js" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\Player\PlayerLabel.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\Player\FireWeapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\Player\EditorMode.cs" Line="16" Column="25" />
+      <File FileName="Assets\_Scripts\Player\EditorMode.cs" Line="1" Column="1" />
+      <File FileName="Assets\__TO DO.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -7,8 +7,20 @@ public class EditorMode : MonoBehaviour
 	public float updateInterval = 0.2f;
 	private float nextUpdate = 0.0f;
 	
+	#region Variables for "Add an Object" Window
+	private int winAddXSize = 400;
+	private int winAddYSize = 50;
+	private int addBoxOffset = 10;
+	private int addBoxWidth;
+	private Rect windowRectAdd;
+	
+	public GameObject cube;
+	public Vector3 spawnLocation;
+	#endregion
+	
+	#region Variables for Properties Window
 	private int winPropertiesXSize = 200;
-	private int winPropertiesYSize = 400;
+	private int winPropertiesYSize = 290;
 	private int boxOffset = 10;
 	private int boxWidth;
 	private Rect windowRectProperties;
@@ -38,10 +50,12 @@ public class EditorMode : MonoBehaviour
 	public float floaRotX;
 	public float floaRotY;
 	public float floaRotZ;
+	#endregion
 	
 	void Start()
 	{
 		windowRectProperties = new Rect(20, 20, winPropertiesXSize, winPropertiesYSize);
+		windowRectAdd = new Rect((Screen.width/2) - (winAddXSize/2), 20, winAddXSize, winAddYSize);
 	}
 	
 	void Update()
@@ -54,8 +68,17 @@ public class EditorMode : MonoBehaviour
 			RaycastHit objectHit;
 			if(Physics.Raycast (Camera.main.ScreenPointToRay(Input.mousePosition), out objectHit, 30.0f))
 			{
+				
 				if(objectHit.rigidbody && !objectHit.collider.tag.Contains("Player"))
+				{
+					if(selectedObject)
+						selectedObject.collider.renderer.material.shader = Shader.Find ("Diffuse");
+					
+					objectHit.collider.renderer.material.shader = Shader.Find ("Outlined/Silhouetted Diffuse");
 					selectedObject = objectHit.rigidbody.gameObject;
+					objectHit.collider.renderer.material.SetColor ("_OutlineColor", Color.magenta);
+				}
+				
 			}
 		}
 		
@@ -100,6 +123,7 @@ public class EditorMode : MonoBehaviour
 		if(inEditor)
 		{
 			windowRectProperties = GUI.Window (0, windowRectProperties, showObjectProperties, "Object Properties"); //creates the property window
+			windowRectAdd = GUI.Window (1, windowRectAdd, showAddObject, "Add an Object"); //creates the property window
 		}
 	}
 	
@@ -190,6 +214,11 @@ public class EditorMode : MonoBehaviour
 								strRotZ, 25);
 		#endregion
 		
+		GUI.DragWindow();
+	}
+	
+	void showAddObject(int windowID)
+	{
 		GUI.DragWindow();
 	}
 }

@@ -53,6 +53,8 @@
      <None Include="Assets\Plugins\Decal System\Shader\Decal-Alpha-Diffuse.shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Decal-Alpha-VertexLit.shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Mobile\Mobile-Decal-AlphaTest-Bumped.shader" />
+     <None Include="Assets\_Shaders\Outline.shader" />
+     <None Include="Assets\_Shaders\OutlineFilled.shader" />
      <None Include="Assets\Plugins\Decal System\Readme.txt" />
      <None Include="Assets\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Decal-AlphaTest-VertexLit.shader" />
@@ -62,6 +64,7 @@
      <None Include="Assets\Plugins\Decal System\Release Notes.txt" />
      <None Include="Assets\Plugins\Decal System\Shader\Decal-Alpha-TargetBumped.shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Decal-AlphaTest-Bumped.shader" />
+     <None Include="Assets\_Shaders\OutlinedDiffuse.shader" />
      <None Include="Assets\Plugins\Decal System\Shader\Mobile\Mobile-Decal-Alpha-Bumped.shader" />
      <None Include="Assets\Plugins\Decal System\DecalSystem.Runtime.xml" />
      <None Include="Assets\Plugins\Decal System\Shader\Mobile\Mobile-Decal-AlphaTest-TargetBumped.shader" />
